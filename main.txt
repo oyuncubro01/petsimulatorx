@@ -179,7 +179,7 @@ OpenMain.Position = UDim2.new(0.001973976, 0, 0.823832953, 0)
 OpenMain.Size = UDim2.new(0, 100, 0, 28)
 OpenMain.BackgroundTransparency = 1
 OpenMain.Active = true
-OpenMain.Draggable = false
+OpenMain.Draggable = true
 OpenMain.Visible = false
 
 
@@ -193,7 +193,6 @@ plus.TextColor3 = Color3.new(175, 175, 175)
 plus.TextSize = 18
 plus.TextWrapped = true
 plus.MouseButton1Down:connect(function()
-plus.Draggable = true
 main.Visible = true
 plus.Visible = false
 end)
