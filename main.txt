@@ -20,7 +20,7 @@ ToxinsScriptHub.Parent = game.CoreGui
 
 main.Name = "main"
 main.Parent = ToxinsScriptHub
-main.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 main.BorderColor3 = Color3.fromRGB(27, 42, 53)
 main.BorderSizePixel = 0
 main.Position = UDim2.new(0.0379153639, 0, 0.682151854, 0)
@@ -31,17 +31,17 @@ main.Draggable = true
 
 title.Name = "title"
 title.Parent = main
-title.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+title.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 title.BorderSizePixel = 0
 title.Size = UDim2.new(0, 340, 0, 38)
 title.Font = Enum.Font.TitilliumWeb
 title.Text = "Toxins Pet Simulator X Hub"
-title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextColor3 = Color3.fromRGB(175, 175, 175)
 title.TextSize = 30.000
 title.TextWrapped = true
 
 Frame.Parent = main
-Frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 0, 0.175925925, 0)
 Frame.Size = UDim2.new(0, 60, 0, 178)
@@ -64,20 +64,20 @@ TextLabel.Position = UDim2.new(0, 0, 0.236111104, 0)
 TextLabel.Size = UDim2.new(0, 60, 0, 114)
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = "Coming Soon..."
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextColor3 = Color3.fromRGB(175, 175, 175)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
 AdminScript.Name = "Admin Script"
 AdminScript.Parent = main
-AdminScript.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+AdminScript.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 AdminScript.BorderSizePixel = 0
 AdminScript.Position = UDim2.new(0.722470582, 0, 0.208740741, 0)
 AdminScript.Size = UDim2.new(0, 83, 0, 50)
 AdminScript.Font = Enum.Font.SciFi
 AdminScript.Text = "Admin Script"
-AdminScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdminScript.TextColor3 = Color3.fromRGB(175, 175, 175)
 AdminScript.TextScaled = true
 AdminScript.TextSize = 14.000
 AdminScript.TextWrapped = true
@@ -87,13 +87,13 @@ end)
 
 RandomPetSimXScript.Name = "Random Pet Sim X Script"
 RandomPetSimXScript.Parent = main
-RandomPetSimXScript.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+RandomPetSimXScript.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 RandomPetSimXScript.BorderSizePixel = 0
 RandomPetSimXScript.Position = UDim2.new(0.461470604, 0, 0.208740741, 0)
 RandomPetSimXScript.Size = UDim2.new(0, 83, 0, 50)
 RandomPetSimXScript.Font = Enum.Font.SciFi
 RandomPetSimXScript.Text = "Random Pet Sim X Script"
-RandomPetSimXScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+RandomPetSimXScript.TextColor3 = Color3.fromRGB(175, 175, 175)
 RandomPetSimXScript.TextScaled = true
 RandomPetSimXScript.TextSize = 14.000
 RandomPetSimXScript.TextWrapped = true
@@ -103,13 +103,13 @@ end)
 
 naypramxhub.Name = "naypramxhub"
 naypramxhub.Parent = main
-naypramxhub.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 naypramxhub.BorderSizePixel = 0
 naypramxhub.Position = UDim2.new(0.200000003, 0, 0.208333343, 0)
 naypramxhub.Size = UDim2.new(0, 83, 0, 50)
 naypramxhub.Font = Enum.Font.SciFi
 naypramxhub.Text = "Naypramx Pet Sim X Script"
-naypramxhub.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub.TextColor3 = Color3.fromRGB(175, 175, 175)
 naypramxhub.TextScaled = true
 naypramxhub.TextSize = 14.000
 naypramxhub.TextWrapped = true
@@ -119,39 +119,39 @@ end)
 
 naypramxhub_2.Name = "naypramxhub"
 naypramxhub_2.Parent = main
-naypramxhub_2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 naypramxhub_2.BorderSizePixel = 0
 naypramxhub_2.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
 naypramxhub_2.Size = UDim2.new(0, 83, 0, 50)
 naypramxhub_2.Font = Enum.Font.SciFi
 naypramxhub_2.Text = "Coming soon.."
-naypramxhub_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_2.TextColor3 = Color3.fromRGB(175, 175, 175)
 naypramxhub_2.TextScaled = true
 naypramxhub_2.TextSize = 14.000
 naypramxhub_2.TextWrapped = true
 
 naypramxhub_3.Name = "naypramxhub"
 naypramxhub_3.Parent = main
-naypramxhub_3.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 naypramxhub_3.BorderSizePixel = 0
 naypramxhub_3.Position = UDim2.new(0.461470604, 0, 0.467999995, 0)
 naypramxhub_3.Size = UDim2.new(0, 83, 0, 50)
 naypramxhub_3.Font = Enum.Font.SciFi
 naypramxhub_3.Text = "Coming soon.."
-naypramxhub_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_3.TextColor3 = Color3.fromRGB(175, 175, 175)
 naypramxhub_3.TextScaled = true
 naypramxhub_3.TextSize = 14.000
 naypramxhub_3.TextWrapped = true
 
 naypramxhub_4.Name = "naypramxhub"
 naypramxhub_4.Parent = main
-naypramxhub_4.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 naypramxhub_4.BorderSizePixel = 0
 naypramxhub_4.Position = UDim2.new(0.200000003, 0, 0.467592597, 0)
 naypramxhub_4.Size = UDim2.new(0, 83, 0, 50)
 naypramxhub_4.Font = Enum.Font.SciFi
 naypramxhub_4.Text = "Coming soon.."
-naypramxhub_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_4.TextColor3 = Color3.fromRGB(175, 175, 175)
 naypramxhub_4.TextScaled = true
 naypramxhub_4.TextSize = 14.000
 naypramxhub_4.TextWrapped = true
@@ -185,11 +185,11 @@ OpenMain.Visible = false
 
 plus.Name = "plus"
 plus.Parent = OpenMain
-plus.BackgroundColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+plus.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
 plus.Size = UDim2.new(0, 100, 0, 28)
 plus.Font = Enum.Font.GothamBold
 plus.Text = "+"
-plus.TextColor3 = Color3.new(0.882353, 0.882353, 0.882353)
+plus.TextColor3 = Color3.new(175, 175, 175)
 plus.TextSize = 18
 plus.TextWrapped = true
 plus.MouseButton1Down:connect(function()
