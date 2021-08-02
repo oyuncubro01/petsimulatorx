@@ -193,6 +193,7 @@ plus.TextColor3 = Color3.new(175, 175, 175)
 plus.TextSize = 18
 plus.TextWrapped = true
 plus.MouseButton1Down:connect(function()
+plus.Draggable = true
 main.Visible = true
 plus.Visible = false
 end)
