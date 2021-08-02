@@ -1,97 +1,198 @@
--- Made By Jake11price
-local ScreenGui = Instance.new("ScreenGui")
+--Made by Toxin
+local ToxinsScriptHub = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local title = Instance.new("TextLabel")
-local prisonbreakerv15 = Instance.new("TextButton")
-local prisonbreakerv16 = Instance.new("TextButton")
-local close = Instance.new("TextButton")
-local openmain = Instance.new("Frame")
-local open = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local home = Instance.new("ImageButton")
+local TextLabel = Instance.new("TextLabel")
+local AdminScript = Instance.new("TextButton")
+local RandomPetSimXScript = Instance.new("TextButton")
+local naypramxhub = Instance.new("TextButton")
+local naypramxhub_2 = Instance.new("TextButton")
+local naypramxhub_3 = Instance.new("TextButton")
+local naypramxhub_4 = Instance.new("TextButton")
+local cross = Instance.new("ImageButton")
+local OpenMain = Instance.new("Frame")
+local plus = Instance.new("TextButton")
+
 --Properties:
-ScreenGui.Parent = game.CoreGui
+ToxinsScriptHub.Parent = game.CoreGui
 
 main.Name = "main"
-main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.new(0, 0, 0)
-main.Position = UDim2.new(0.0203577988, 0, 0.641277611, 0)
-main.Size = UDim2.new(0, 332, 0, 211)
-main.Visible = false
+main.Parent = ToxinsScriptHub
+main.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+main.BorderColor3 = Color3.fromRGB(27, 42, 53)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.0379153639, 0, 0.682151854, 0)
+main.Size = UDim2.new(0, 340, 0, 216)
+main.Visible = true
 main.Active = true
 main.Draggable = true
 
 title.Name = "title"
 title.Parent = main
-title.BackgroundColor3 = Color3.new(0, 100, 0)
-title.Size = UDim2.new(0, 332, 0, 31)
-title.Font = Enum.Font.GothamBold
-title.Text = "Toxins Pet Simulator GUI"
-title.TextColor3 = Color3.new(0, 0, 0)
-title.TextSize = 14
+title.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
+title.BorderSizePixel = 0
+title.Size = UDim2.new(0, 340, 0, 38)
+title.Font = Enum.Font.TitilliumWeb
+title.Text = "Toxins Pet Simulator X Hub"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextSize = 30.000
+title.TextWrapped = true
 
-prisonbreakerv15.Name = "Admin"
-prisonbreakerv15.Parent = main
-prisonbreakerv15.BackgroundColor3 = Color3.new(100, 0, 0)
-prisonbreakerv15.Position = UDim2.new(0.036144577, 0, 0.379146934, 0)
-prisonbreakerv15.Size = UDim2.new(0, 110, 0, 50)
-prisonbreakerv15.Font = Enum.Font.GothamBold
-prisonbreakerv15.Text = "Admin"
-prisonbreakerv15.TextColor3 = Color3.new(0, 0, 0)
-prisonbreakerv15.TextScaled = true
-prisonbreakerv15.TextSize = 10
-prisonbreakerv15.TextWrapped = true
-prisonbreakerv15.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 0.175925925, 0)
+Frame.Size = UDim2.new(0, 60, 0, 178)
+
+home.Name = "home"
+home.Parent = main
+home.BackgroundTransparency = 1.000
+home.Position = UDim2.new(0.0502606034, 0, 0.261665106, 0)
+home.Size = UDim2.new(0, 25, 0, 25)
+home.ZIndex = 2
+home.Image = "rbxassetid://3926305904"
+home.ImageRectOffset = Vector2.new(964, 204)
+home.ImageRectSize = Vector2.new(36, 36)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.236111104, 0)
+TextLabel.Size = UDim2.new(0, 60, 0, 114)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Coming Soon..."
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+AdminScript.Name = "Admin Script"
+AdminScript.Parent = main
+AdminScript.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+AdminScript.BorderSizePixel = 0
+AdminScript.Position = UDim2.new(0.722470582, 0, 0.208740741, 0)
+AdminScript.Size = UDim2.new(0, 83, 0, 50)
+AdminScript.Font = Enum.Font.SciFi
+AdminScript.Text = "Admin Script"
+AdminScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdminScript.TextScaled = true
+AdminScript.TextSize = 14.000
+AdminScript.TextWrapped = true
+AdminScript.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
 end)
 
-prisonbreakerv16.Name = "Pet Simulator X"
-prisonbreakerv16.Parent = main
-prisonbreakerv16.BackgroundColor3 = Color3.new(100, 0, 0)
-prisonbreakerv16.Position = UDim2.new(0.614457846, 0, 0.379146934, 0)
-prisonbreakerv16.Size = UDim2.new(0, 110, 0, 50)
-prisonbreakerv16.Font = Enum.Font.GothamBold
-prisonbreakerv16.Text = "Pet Simulator X"
-prisonbreakerv16.TextColor3 = Color3.new(0, 0, 0)
-prisonbreakerv16.TextScaled = true
-prisonbreakerv16.TextSize = 14
-prisonbreakerv16.TextWrapped = true
-prisonbreakerv16.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/95HthyJq"))()
+RandomPetSimXScript.Name = "Random Pet Sim X Script"
+RandomPetSimXScript.Parent = main
+RandomPetSimXScript.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+RandomPetSimXScript.BorderSizePixel = 0
+RandomPetSimXScript.Position = UDim2.new(0.461470604, 0, 0.208740741, 0)
+RandomPetSimXScript.Size = UDim2.new(0, 83, 0, 50)
+RandomPetSimXScript.Font = Enum.Font.SciFi
+RandomPetSimXScript.Text = "Random Pet Sim X Script"
+RandomPetSimXScript.TextColor3 = Color3.fromRGB(0, 0, 0)
+RandomPetSimXScript.TextScaled = true
+RandomPetSimXScript.TextSize = 14.000
+RandomPetSimXScript.TextWrapped = true
+RandomPetSimXScript.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://system-exodus.com/scripts/PetSimulator/PetSimulatorX.lua", true))()
 end)
 
-close.Name = "close"
-close.Parent = main
-close.BackgroundColor3 = Color3.new(1, 0, 0)
-close.Position = UDim2.new(0.879518092, 0, 0, 0)
-close.Size = UDim2.new(0, 40, 0, 31)
-close.Font = Enum.Font.GothamBlack
-close.Text = "X"
-close.TextColor3 = Color3.new(0, 0, 0)
-close.TextScaled = true
-close.TextSize = 14
-close.TextWrapped = true
-close.MouseButton1Down:connect(function()
+naypramxhub.Name = "naypramxhub"
+naypramxhub.Parent = main
+naypramxhub.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub.BorderSizePixel = 0
+naypramxhub.Position = UDim2.new(0.200000003, 0, 0.208333343, 0)
+naypramxhub.Size = UDim2.new(0, 83, 0, 50)
+naypramxhub.Font = Enum.Font.SciFi
+naypramxhub.Text = "Naypramx Pet Sim X Script"
+naypramxhub.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub.TextScaled = true
+naypramxhub.TextSize = 14.000
+naypramxhub.TextWrapped = true
+naypramxhub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/95HthyJq"))()
+end)
+
+naypramxhub_2.Name = "naypramxhub"
+naypramxhub_2.Parent = main
+naypramxhub_2.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_2.BorderSizePixel = 0
+naypramxhub_2.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
+naypramxhub_2.Size = UDim2.new(0, 83, 0, 50)
+naypramxhub_2.Font = Enum.Font.SciFi
+naypramxhub_2.Text = "Coming soon.."
+naypramxhub_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_2.TextScaled = true
+naypramxhub_2.TextSize = 14.000
+naypramxhub_2.TextWrapped = true
+
+naypramxhub_3.Name = "naypramxhub"
+naypramxhub_3.Parent = main
+naypramxhub_3.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_3.BorderSizePixel = 0
+naypramxhub_3.Position = UDim2.new(0.461470604, 0, 0.467999995, 0)
+naypramxhub_3.Size = UDim2.new(0, 83, 0, 50)
+naypramxhub_3.Font = Enum.Font.SciFi
+naypramxhub_3.Text = "Coming soon.."
+naypramxhub_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_3.TextScaled = true
+naypramxhub_3.TextSize = 14.000
+naypramxhub_3.TextWrapped = true
+
+naypramxhub_4.Name = "naypramxhub"
+naypramxhub_4.Parent = main
+naypramxhub_4.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+naypramxhub_4.BorderSizePixel = 0
+naypramxhub_4.Position = UDim2.new(0.200000003, 0, 0.467592597, 0)
+naypramxhub_4.Size = UDim2.new(0, 83, 0, 50)
+naypramxhub_4.Font = Enum.Font.SciFi
+naypramxhub_4.Text = "Coming soon.."
+naypramxhub_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+naypramxhub_4.TextScaled = true
+naypramxhub_4.TextSize = 14.000
+naypramxhub_4.TextWrapped = true
+
+cross.Name = "cross"
+cross.Parent = main
+cross.BackgroundTransparency = 1.000
+cross.LayoutOrder = 5
+cross.Position = UDim2.new(0.891176462, 0, 0.0277777854, 0)
+cross.Size = UDim2.new(0, 25, 0, 25)
+cross.ZIndex = 2
+cross.Image = "rbxassetid://6764432408"
+cross.ImageRectOffset = Vector2.new(200, 600)
+cross.ImageRectSize = Vector2.new(50, 50)
+cross.MouseButton1Down:connect(function()
 main.Visible = false
-openmain.Visible = true
+OpenMain.Visible = true
+plus.Visible = true
 end)
 
-openmain.Name = "openmain"
-openmain.Parent = ScreenGui
-openmain.BackgroundColor3 = Color3.new(1, 1, 1)
-openmain.Position = UDim2.new(0.00801973976, 0, 0.923832953, 0)
-openmain.Size = UDim2.new(0, 100, 0, 28)
-openmain.Active = true
-openmain.Draggable = true
+OpenMain.Name = "OpenMain"
+OpenMain.Parent = ToxinsScriptHub
+OpenMain.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenMain.Position = UDim2.new(0.001973976, 0, 0.823832953, 0)
+OpenMain.Size = UDim2.new(0, 100, 0, 28)
+OpenMain.BackgroundTransparency = 1
+OpenMain.Active = true
+OpenMain.Draggable = false
+OpenMain.Visible = false
 
-open.Name = "open"
-open.Parent = openmain
-open.BackgroundColor3 = Color3.new(1, 0, 0)
-open.Size = UDim2.new(0, 100, 0, 28)
-open.Font = Enum.Font.GothamBold
-open.Text = "OPEN"
-open.TextColor3 = Color3.new(0, 0, 0)
-open.TextSize = 18
-open.TextWrapped = true
-open.MouseButton1Down:connect(function()
-openmain.Visible = false
+
+plus.Name = "plus"
+plus.Parent = OpenMain
+plus.BackgroundColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+plus.Size = UDim2.new(0, 100, 0, 28)
+plus.Font = Enum.Font.GothamBold
+plus.Text = "+"
+plus.TextColor3 = Color3.new(0.882353, 0.882353, 0.882353)
+plus.TextSize = 18
+plus.TextWrapped = true
+plus.MouseButton1Down:connect(function()
 main.Visible = true
+plus.Visible = false
 end)
