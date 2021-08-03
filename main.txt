@@ -163,7 +163,7 @@ cross.Name = "cross"
 cross.Parent = main
 cross.BackgroundTransparency = 1.000
 cross.LayoutOrder = 5
-cross.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
+cross.Position = UDim2.new(0.891176462, 0, 0.0277777854, 0)
 cross.Size = UDim2.new(0, 25, 0, 25)
 cross.ZIndex = 2
 cross.Image = "rbxassetid://6764432408"
@@ -178,7 +178,7 @@ end)
 OpenMain.Name = "OpenMain"
 OpenMain.Parent = ToxinsScriptHub
 OpenMain.BackgroundColor3 = Color3.new(1, 1, 1)
-OpenMain.Position = UDim2.new(15, 0, 10, 0)
+OpenMain.Position = UDim2.new(0.001973976, 0, 0.823832953, 0)
 OpenMain.Size = UDim2.new(0, 100, 0, 28)
 OpenMain.BackgroundTransparency = 1
 OpenMain.Active = true
