@@ -8,7 +8,7 @@ local TextLabel = Instance.new("TextLabel")
 local AdminScript = Instance.new("TextButton")
 local RandomPetSimXScript = Instance.new("TextButton")
 local naypramxhub = Instance.new("TextButton")
-local naypramxhub_2 = Instance.new("TextButton")
+local InfiniteYieldAdmin = Instance.new("TextButton")
 local naypramxhub_3 = Instance.new("TextButton")
 local naypramxhub_4 = Instance.new("TextButton")
 local cross = Instance.new("ImageButton")
@@ -117,18 +117,21 @@ naypramxhub.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/95HthyJq"))()
 end)
 
-naypramxhub_2.Name = "naypramxhub"
-naypramxhub_2.Parent = main
-naypramxhub_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-naypramxhub_2.BorderSizePixel = 0
-naypramxhub_2.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
-naypramxhub_2.Size = UDim2.new(0, 83, 0, 50)
-naypramxhub_2.Font = Enum.Font.SciFi
-naypramxhub_2.Text = "Coming soon.."
-naypramxhub_2.TextColor3 = Color3.fromRGB(175, 175, 175)
-naypramxhub_2.TextScaled = true
-naypramxhub_2.TextSize = 14.000
-naypramxhub_2.TextWrapped = true
+InfiniteYieldAdmin.Name = "Infinite Yield Admin"
+InfiniteYieldAdmin.Parent = main
+InfiniteYieldAdmin.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+InfiniteYieldAdmin.BorderSizePixel = 0
+InfiniteYieldAdmin.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
+InfiniteYieldAdmin.Size = UDim2.new(0, 83, 0, 50)
+InfiniteYieldAdmin.Font = Enum.Font.SciFi
+InfiniteYieldAdmin.Text = "Coming soon.."
+InfiniteYieldAdmin.TextColor3 = Color3.fromRGB(175, 175, 175)
+InfiniteYieldAdmin.TextScaled = true
+InfiniteYieldAdmin.TextSize = 14.000
+InfiniteYieldAdmin.TextWrapped = true
+InfiniteYieldAdmin.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
 
 naypramxhub_3.Name = "naypramxhub"
 naypramxhub_3.Parent = main
