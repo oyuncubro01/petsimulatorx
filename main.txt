@@ -178,7 +178,7 @@ end)
 OpenMain.Name = "OpenMain"
 OpenMain.Parent = ToxinsScriptHub
 OpenMain.BackgroundColor3 = Color3.new(1, 1, 1)
-OpenMain.Position = UDim2.new(0.001973976, 0, 0.823832953, 0)
+OpenMain.Position = UDim2.new(15, 0, 10, 0)
 OpenMain.Size = UDim2.new(0, 100, 0, 28)
 OpenMain.BackgroundTransparency = 1
 OpenMain.Active = true
