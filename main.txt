@@ -8,7 +8,7 @@ local TextLabel = Instance.new("TextLabel")
 local AdminScript = Instance.new("TextButton")
 local RandomPetSimXScript = Instance.new("TextButton")
 local naypramxhub = Instance.new("TextButton")
-local naypramxhub_2 = Instance.new("TextButton")
+local InfiniteYieldAdmin = Instance.new("TextButton")
 local naypramxhub_3 = Instance.new("TextButton")
 local naypramxhub_4 = Instance.new("TextButton")
 local cross = Instance.new("ImageButton")
@@ -55,6 +55,19 @@ home.ZIndex = 2
 home.Image = "rbxassetid://3926305904"
 home.ImageRectOffset = Vector2.new(964, 204)
 home.ImageRectSize = Vector2.new(36, 36)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.236111104, 0)
+TextLabel.Size = UDim2.new(0, 60, 0, 114)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Coming Soon..."
+TextLabel.TextColor3 = Color3.fromRGB(175, 175, 175)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
 AdminScript.Name = "Admin Script"
 AdminScript.Parent = main
@@ -107,7 +120,7 @@ end)
 InfiniteYieldAdmin.Name = "Infinite Yield Admin"
 InfiniteYieldAdmin.Parent = main
 InfiniteYieldAdmin.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-InfiniteYield Admin.BorderSizePixel = 0
+InfiniteYieldAdmin.BorderSizePixel = 0
 InfiniteYieldAdmin.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
 InfiniteYieldAdmin.Size = UDim2.new(0, 83, 0, 50)
 InfiniteYieldAdmin.Font = Enum.Font.SciFi
@@ -157,25 +170,25 @@ cross.Image = "rbxassetid://6764432408"
 cross.ImageRectOffset = Vector2.new(200, 600)
 cross.ImageRectSize = Vector2.new(50, 50)
 cross.MouseButton1Down:connect(function()
-	main.Visible = false
-	OpenMain.Visible = true
-	plus.Visible = true
+main.Visible = false
+OpenMain.Visible = true
+plus.Visible = true
 end)
 
 OpenMain.Name = "OpenMain"
 OpenMain.Parent = ToxinsScriptHub
 OpenMain.BackgroundColor3 = Color3.new(1, 1, 1)
-plus.Position = UDim2.new(18, 0,10, 0)
+OpenMain.Position = UDim2.new(15, 0, 10, 0)
 OpenMain.Size = UDim2.new(0, 100, 0, 28)
 OpenMain.BackgroundTransparency = 1
 OpenMain.Active = true
-OpenMain.Draggable = false
+OpenMain.Draggable = true
 OpenMain.Visible = false
 
 
 plus.Name = "plus"
 plus.Parent = OpenMain
-plus.BackgroundColor3 = Color3.new(0.000412, 0.029412, 0.00412)
+plus.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
 plus.Size = UDim2.new(0, 100, 0, 28)
 plus.Font = Enum.Font.GothamBold
 plus.Text = "+"
@@ -183,6 +196,6 @@ plus.TextColor3 = Color3.new(175, 175, 175)
 plus.TextSize = 18
 plus.TextWrapped = true
 plus.MouseButton1Down:connect(function()
-	main.Visible = true
-	plus.Visible = false
+main.Visible = true
+plus.Visible = false
 end)
