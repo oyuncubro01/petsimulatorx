@@ -1,201 +1,162 @@
---Made by Toxin
-local ToxinsScriptHub = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local title = Instance.new("TextLabel")
-local Frame = Instance.new("Frame")
-local home = Instance.new("ImageButton")
-local TextLabel = Instance.new("TextLabel")
-local AdminScript = Instance.new("TextButton")
-local RandomPetSimXScript = Instance.new("TextButton")
-local naypramxhub = Instance.new("TextButton")
-local InfiniteYieldAdmin = Instance.new("TextButton")
-local naypramxhub_3 = Instance.new("TextButton")
-local naypramxhub_4 = Instance.new("TextButton")
-local cross = Instance.new("ImageButton")
-local OpenMain = Instance.new("Frame")
-local plus = Instance.new("TextButton")
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Maxgat5/UiLib/main/lua')))()
+local w = library:CreateWindow("Pet Simulator X")
+local b = w:CreateFolder("Pet Collection")
+local e = w:CreateFolder("Mix")
+local u = w:CreateFolder("Credits")
 
---Properties:
-ToxinsScriptHub.Parent = game.CoreGui
-
-main.Name = "main"
-main.Parent = ToxinsScriptHub
-main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-main.BorderColor3 = Color3.fromRGB(27, 42, 53)
-main.BorderSizePixel = 0
-main.Position = UDim2.new(0.0379153639, 0, 0.682151854, 0)
-main.Size = UDim2.new(0, 340, 0, 216)
-main.Visible = true
-main.Active = true
-main.Draggable = true
-
-title.Name = "title"
-title.Parent = main
-title.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-title.BorderSizePixel = 0
-title.Size = UDim2.new(0, 340, 0, 38)
-title.Font = Enum.Font.TitilliumWeb
-title.Text = "Toxins Pet Simulator X Hub"
-title.TextColor3 = Color3.fromRGB(175, 175, 175)
-title.TextSize = 30.000
-title.TextWrapped = true
-
-Frame.Parent = main
-Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0, 0, 0.175925925, 0)
-Frame.Size = UDim2.new(0, 60, 0, 178)
-
-home.Name = "home"
-home.Parent = main
-home.BackgroundTransparency = 1.000
-home.Position = UDim2.new(0.0502606034, 0, 0.261665106, 0)
-home.Size = UDim2.new(0, 25, 0, 25)
-home.ZIndex = 2
-home.Image = "rbxassetid://3926305904"
-home.ImageRectOffset = Vector2.new(964, 204)
-home.ImageRectSize = Vector2.new(36, 36)
-
-TextLabel.Parent = main
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0, 0, 0.236111104, 0)
-TextLabel.Size = UDim2.new(0, 60, 0, 114)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Coming Soon..."
-TextLabel.TextColor3 = Color3.fromRGB(175, 175, 175)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-AdminScript.Name = "Admin Script"
-AdminScript.Parent = main
-AdminScript.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-AdminScript.BorderSizePixel = 0
-AdminScript.Position = UDim2.new(0.722470582, 0, 0.208740741, 0)
-AdminScript.Size = UDim2.new(0, 83, 0, 50)
-AdminScript.Font = Enum.Font.SciFi
-AdminScript.Text = "Admin Script"
-AdminScript.TextColor3 = Color3.fromRGB(175, 175, 175)
-AdminScript.TextScaled = true
-AdminScript.TextSize = 14.000
-AdminScript.TextWrapped = true
-AdminScript.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+b:Button("Start",function()
+    if game:GetService("Workspace")["__MAP"].Interactive:FindFirstChild("Dominus Gate") then
+        game:GetService("Workspace")["__MAP"].Interactive["Dominus Gate"]:Destroy()
+    end
+    Eggs = {}
+    noclip = true
+    for i,v in pairs(game:GetService("Workspace")["__MAP"].Eggs:GetDescendants()) do
+        if v.Name == "PriceHUD" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Parent.Egg.CFrame.Position + Vector3.new(0,5,0))
+            wait(.2)
+            for i1,v1 in pairs(v.Parent.EggInfo.Frame.Pets:GetChildren()) do
+                if v1.ClassName == "Frame" then
+                    table.insert(Eggs,v1.Thumbnail.Image)
+                end
+            end
+            wait(.1)
+        end
+    end
+    noclip = false
+    game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled = true
+    game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Title.Text = "Select Pet"
+    game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Bottom.Visible = false
+    game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Container.Size = UDim2.new(1,0,1,0)
+    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Container.Holder:GetChildren()) do
+        if v.ClassName == "TextButton" then
+            v.MouseButton1Click:Connect(function()
+                game:GetService("Players").LocalPlayer.PlayerGui.Collection.Enabled = false
+                SelectedImage = ""
+                EggName = ""
+                PetsCount = ""
+                EggPrice = ""
+                local ScG = Instance.new("ScreenGui",game:GetService("CoreGui"))
+                ScG.Name = "Maxgat5"
+                if not ScG:FindFirstChild("Maxgat5") then
+                    SelectedImage = v.PetIcon.Image
+                    local Cloned = v:Clone()
+                    Cloned.Parent = ScG
+                    Cloned.PetIcon.ImageColor3 = Color3.new(255,255,255)
+                    Cloned.PetIcon.Locked.Visible = false
+                    Cloned.Position = UDim2.new(0.053, 0,0.824, 0)
+                    Cloned.AnchorPoint = Vector2.new(0.5, 0)
+                    Cloned.Size = UDim2.new(0.076, 0,0.143, 0)
+                    Cloned.Name = "Maxgat5"
+                end
+                if ScG:FindFirstChild("Maxgat5") then
+                    if table.find(Eggs,v.PetIcon.Image) then
+                        print('Found!')
+                        SelectedImage = v.PetIcon.Image
+                        ScG.Maxgat5.PetIcon.Image = v.PetIcon.Image
+                        noclip = true
+                        for i,v in pairs(game:GetService("Workspace")["__MAP"].Eggs:GetDescendants()) do
+                            if v.Name == "PriceHUD" then
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Parent.Egg.CFrame.Position + Vector3.new(0,5,0))
+                                wait(.2)
+                                for i1,v1 in pairs(v.Parent.EggInfo.Frame.Pets:GetChildren()) do
+                                    if v1.ClassName == "Frame" then
+                                        if v1.Thumbnail.Image == SelectedImage then
+                                            EggPrice = v.EggCost.Amount.Text
+                                        end
+                                    end
+                                end
+                                wait(.1)
+                            end
+                        end
+                        noclip = false
+                        wait(2)
+                        for i2,v2 in pairs(game:GetService("Workspace")["__MAP"].Eggs:GetDescendants()) do
+                            if v2.Name == "Amount" then
+                                if v2.ClassName == "TextLabel" then
+                                    if v2.Text == EggPrice then
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v2.Parent.Parent.Parent.Egg.CFrame.Position + Vector3.new(0,5,0))
+                                        repeat
+                                            wait()
+                                            keypress(0x45)
+                                            wait()
+                                            keyrelease(0x45)
+                                            wait()
+                                        until game:GetService("Players").LocalPlayer.PlayerGui.Message.Enabled == true
+                                        local test = tostring(game:GetService("Players").LocalPlayer.PlayerGui.Message.Frame.Desc.Text)
+                                        local test1 = string.gsub(test,"Buy and open ","@")
+                                        local test2 = string.gsub(test1,"a ","@")
+                                        local test3 = string.gsub(test2,"@.*@","")
+                                        local test4 = string.gsub(test3," for ","@")
+                                        local test5 = string.gsub(test4," Coins??","@")
+                                        local Egg = string.gsub(test5,"@.*@","")
+                                        EggName = Egg
+                                        print(EggName)
+                                        repeat
+                                            wait()
+                                            number = 0
+                                            for i,v3 in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets:GetChildren()) do
+                                                if v3:FindFirstChild("PetIcon") then
+                                                    if v3.PetIcon.Image == SelectedImage then
+                                                        number = number + 1
+                                                    end
+                                                end
+                                            end
+                                            PetsCount = number
+                                            workspace.__THINGS.__REMOTES["buy egg"]:InvokeServer({tostring(EggName),false})
+                                        until tonumber(PetsCount) ~= 0
+                                    end
+                                end
+                            end
+                        end
+                    else
+                        print('Not Found!')
+                    end
+                end
+            end)
+        end
+    end
 end)
 
-RandomPetSimXScript.Name = "Random Pet Sim X Script"
-RandomPetSimXScript.Parent = main
-RandomPetSimXScript.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-RandomPetSimXScript.BorderSizePixel = 0
-RandomPetSimXScript.Position = UDim2.new(0.461470604, 0, 0.208740741, 0)
-RandomPetSimXScript.Size = UDim2.new(0, 83, 0, 50)
-RandomPetSimXScript.Font = Enum.Font.SciFi
-RandomPetSimXScript.Text = "Random Pet Sim X Script"
-RandomPetSimXScript.TextColor3 = Color3.fromRGB(175, 175, 175)
-RandomPetSimXScript.TextScaled = true
-RandomPetSimXScript.TextSize = 14.000
-RandomPetSimXScript.TextWrapped = true
-RandomPetSimXScript.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://system-exodus.com/scripts/PetSimulator/PetSimulatorX.lua", true))()
+e:Toggle("AntiAfk",function(bool)
+    shared.toggle = bool
+    AntiAfk = bool
+end)
+ 
+--Credits
+u:Button("maxgat5#8395",function()
+    setclipboard("maxgat5#8395")
+end)
+ 
+u:Button("Discord Server",function()
+    setclipboard("https://discord.gg/K4txdRSVfq")
 end)
 
-naypramxhub.Name = "naypramxhub"
-naypramxhub.Parent = main
-naypramxhub.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-naypramxhub.BorderSizePixel = 0
-naypramxhub.Position = UDim2.new(0.200000003, 0, 0.208333343, 0)
-naypramxhub.Size = UDim2.new(0, 83, 0, 50)
-naypramxhub.Font = Enum.Font.SciFi
-naypramxhub.Text = "Naypramx Pet Sim X Script"
-naypramxhub.TextColor3 = Color3.fromRGB(175, 175, 175)
-naypramxhub.TextScaled = true
-naypramxhub.TextSize = 14.000
-naypramxhub.TextWrapped = true
-naypramxhub.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://pastebin.com/raw/95HthyJq"))()
-end)
-
-InfiniteYieldAdmin.Name = "Infinite Yield Admin"
-InfiniteYieldAdmin.Parent = main
-InfiniteYieldAdmin.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-InfiniteYieldAdmin.BorderSizePixel = 0
-InfiniteYieldAdmin.Position = UDim2.new(0.722470582, 0, 0.467999995, 0)
-InfiniteYieldAdmin.Size = UDim2.new(0, 83, 0, 50)
-InfiniteYieldAdmin.Font = Enum.Font.SciFi
-InfiniteYieldAdmin.Text = "Infinite Yield Admin"
-InfiniteYieldAdmin.TextColor3 = Color3.fromRGB(175, 175, 175)
-InfiniteYieldAdmin.TextScaled = true
-InfiniteYieldAdmin.TextSize = 14.000
-InfiniteYieldAdmin.TextWrapped = true
-InfiniteYieldAdmin.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
-
-naypramxhub_3.Name = "naypramxhub"
-naypramxhub_3.Parent = main
-naypramxhub_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-naypramxhub_3.BorderSizePixel = 0
-naypramxhub_3.Position = UDim2.new(0.461470604, 0, 0.467999995, 0)
-naypramxhub_3.Size = UDim2.new(0, 83, 0, 50)
-naypramxhub_3.Font = Enum.Font.SciFi
-naypramxhub_3.Text = "Coming soon.."
-naypramxhub_3.TextColor3 = Color3.fromRGB(175, 175, 175)
-naypramxhub_3.TextScaled = true
-naypramxhub_3.TextSize = 14.000
-naypramxhub_3.TextWrapped = true
-
-naypramxhub_4.Name = "naypramxhub"
-naypramxhub_4.Parent = main
-naypramxhub_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-naypramxhub_4.BorderSizePixel = 0
-naypramxhub_4.Position = UDim2.new(0.200000003, 0, 0.467592597, 0)
-naypramxhub_4.Size = UDim2.new(0, 83, 0, 50)
-naypramxhub_4.Font = Enum.Font.SciFi
-naypramxhub_4.Text = "Coming soon.."
-naypramxhub_4.TextColor3 = Color3.fromRGB(175, 175, 175)
-naypramxhub_4.TextScaled = true
-naypramxhub_4.TextSize = 14.000
-naypramxhub_4.TextWrapped = true
-
-cross.Name = "cross"
-cross.Parent = main
-cross.BackgroundTransparency = 1.000
-cross.LayoutOrder = 5
-cross.Position = UDim2.new(0.891176462, 0, 0.0277777854, 0)
-cross.Size = UDim2.new(0, 25, 0, 25)
-cross.ZIndex = 2
-cross.Image = "rbxassetid://6764432408"
-cross.ImageRectOffset = Vector2.new(200, 600)
-cross.ImageRectSize = Vector2.new(50, 50)
-cross.MouseButton1Down:connect(function()
-main.Visible = false
-OpenMain.Visible = true
-plus.Visible = true
-end)
-
-OpenMain.Name = "OpenMain"
-OpenMain.Parent = ToxinsScriptHub
-OpenMain.BackgroundColor3 = Color3.new(1, 1, 1)
-OpenMain.Position = UDim2.new(0.001973976, 0, 0.823832953, 0)
-OpenMain.Size = UDim2.new(0, 100, 0, 28)
-OpenMain.BackgroundTransparency = 1
-OpenMain.Active = true
-OpenMain.Draggable = true
-OpenMain.Visible = false
-
-
-plus.Name = "plus"
-plus.Parent = OpenMain
-plus.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
-plus.Size = UDim2.new(0, 100, 0, 28)
-plus.Font = Enum.Font.GothamBold
-plus.Text = "+"
-plus.TextColor3 = Color3.new(175, 175, 175)
-plus.TextSize = 18
-plus.TextWrapped = true
-plus.MouseButton1Down:connect(function()
-main.Visible = true
-plus.Visible = false
+game:GetService('RunService').Stepped:connect(function()
+    spawn(function()
+        if AntiAfk == true then
+            local bb=game:service'VirtualUser'
+            bb:CaptureController()
+            bb:ClickButton2(Vector2.new())
+        end
+    end)
+    if noclip == true then
+        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+    end
+    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Container.Holder:GetChildren()) do
+        if v.ClassName == "TextButton" then
+            if v.PetIcon.Locked.Visible == false then
+                v:Destroy()
+            end
+        end
+    end
+    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Collection.Frame.Container.Holder:GetChildren()) do
+        if v.ClassName == "TextButton" then
+            if v.PetIcon.ImageColor3 == Color3.new(0, 0, 0) then
+                v.PetIcon.ImageColor3 = Color3.new(255,255,255)
+            end
+            if v.PetIcon.Locked.Visible == true then
+                v.PetIcon.Locked.TextTransparency = 1
+            end
+        end
+    end
 end)
